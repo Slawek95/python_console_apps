@@ -85,21 +85,23 @@ while user_choice != 4:
         while num_of_chore <= list_counter(to_do_list) or num_of_chore >= 0:
             show_titled_list(to_do_list, "Twoja lista zadań to: ")
             print("Wprowadź indeks zadania które chcesz usunąć")
-            print("Jeżeli chcesz powrócić wybierz enter")
-            num_of_chore = int(input())
-            num_of_chore = num_of_chore -1
-            if type(num_of_chore) == int:
+            print("Wprowadź enter aby wyjść")
+            num_of_chore = input()
+            if len(num_of_chore) != 0:
+                num_of_chore = int(num_of_chore)
+                num_of_chore = num_of_chore -1 
                 print(f"Zadanie które chcesz usunąć to: {to_do_list[num_of_chore]}")
                 print("Jeżeli chcesz usunąć to zadanie wpisz: y\n jeżeli nie wpisz: n")
                 yes_or_no = input()
-                while len(num_of_chore) != 0:
-                    if yes_or_no == "y":
-                        print("zadanie zostało usunięte")
-                        to_do_list.pop(num_of_chore)
-                    elif yes_or_no == "n":
-                        print("nie usunięto zadania")
-                        show_titled_list(to_do_list, "Twoja lista zadań to: ")
+                if yes_or_no == "y":
+                    print("zadanie zostało usunięte")
+                    to_do_list.pop(num_of_chore)
+                elif yes_or_no == "n":
+                    print("nie usunięto zadania")
+                    show_titled_list(to_do_list, "Twoja lista zadań to: ")
                     break
+            elif len(num_of_chore) == 0:
+                break
                     
 
         
