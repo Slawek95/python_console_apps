@@ -42,7 +42,7 @@ while num_of_try != 0 and len(usr_letter) != 0:
 if num_of_try == 0:
     print("Przegrałeś! \nSpróbuj jeszcze raz.")
 
-        
+# test git
 
 
 
