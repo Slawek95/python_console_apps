@@ -36,4 +36,13 @@ if row_1[0] == row_1[1] == row_1[2] and "_" in row_1:
 
 win_column()
 win_cross()
+sign = "X"
+for x in row_1:
+    if x == "_":
+        x = sign
 
+    else:
+        print("To pole jest zajęte.\n Wybierz inne pole!")
+        continue
+while usr_sign != 1 or usr_sign != 2:
+    print("NIewłaściwa wartość, wybierz: 1 lub 2")
