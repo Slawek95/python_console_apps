@@ -6,27 +6,24 @@
 #TODO dołożyć counter przy wprowadzaniu PIN
 
 
-import Person_class
+import python_console_apps.bankomat_app.class_Person as class_Person
 import sys, os
 usrs_data = {'Sławek' : "1234", 'Erwina' : "0000"} # zrobić klasę dla usr
 account = 1000 # TODO zrobić klase dla kont
 
 ### ACCOUNT from file ###
-base_string = "python_console_apps\bankomat_app\account_file.txt"
-special_stirng = repr(base_string)
+PATH_TO_FILE = "python_console_apps\\bankomat_app\\account_file.txt"
 
-PATH_TO_FILE = special_stirng
-account_file = open(PATH_TO_FILE, "r")
-""""
 try:
-    file = open(PATH_TO_FILE, "r")
-    WORDS = file.readlines()
-    file.close()
+    account_file = open(PATH_TO_FILE, "r")
+    account_balance = account_file.readlines()
+    account_file.close()
 except:
     print("Wystąpił błąd przy otworzeniu pliku!")
     sys.exit()
-WORDS = WORDS.split()
-"""
+for ammount in account_balance:
+    ammount = account
+
 ### ACCOUNT from file ###
 
 def show_options():
